@@ -10,3 +10,36 @@ def triangular(n):
         return n+triangular(n-1)
     else:
         return n
+
+
+
+Problem: WEEK9_PPA2_not_graded
+The factorial of a positive integer nn is defined as follows:
+n!=1⋅2⋅3⋯nn!=1⋅2⋅3⋯n
+Write a recursive function named factorial that accepts a positive integer nn as argument and returns the factorial of nn.
+You do not have to accept input from the user or print the output to the console. You just have to write the function definition.
+
+
+Code:
+
+def factorial(n):
+    if n>1:
+        return n*factorial(n-1)
+    else:
+        return 1
+
+
+Problem:WEEK9_PPA3_not_graded
+Write a recursive function named multiply accepts two positive integers aa and bb as argument and returns their product. You can only use ++ and −− operators. You are not allowed to use the ∗∗ symbol anywhere in your code!
+You do not have to accept input from the user or print the output to the console. You just have to write the function definition.
+
+
+Code:
+
+def multiply(a, b):
+    if a==0 or b==0:
+        return 0
+    elif b>0:
+        return a+multiply(a,b-1)
+    else:
+        return -(multiply(a,-b))
